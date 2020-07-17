@@ -15,7 +15,7 @@ export default function Edit(props) {
              fetch(`http://ec2-52-201-177-168.compute-1.amazonaws.com/movie/${getMovie.id}/`,{
             method:'PUT',
             headers:{
-            'Authorization':`Token ${getMovie}`,
+            'Authorization':`Token ${getMovie}`,//get token
             'Content-Type': 'application/json',
               },
              body: JSON.stringify({ title:title, description:description})
@@ -32,7 +32,7 @@ export default function Edit(props) {
               fetch(`http://ec2-52-201-177-168.compute-1.amazonaws.com/movie/`,{
               method:'POST',
               headers:{
-              'Authorization':`Token ${getMovie}`,
+              'Authorization':`Token ${getMovie}`,//get token
               'Content-Type': 'application/json',
               },
                 body: JSON.stringify({ title:title, description:description})
@@ -107,7 +107,7 @@ const deleteClicked=(props)=>{
   fetch(`http://ec2-52-201-177-168.compute-1.amazonaws.com/movie/${movie.id}/`,{
             method:'DELETE',
             headers:{
-            'Authorization':`Token ${getMovie}`,
+            'Authorization':`Token ${getMovie}`,//get token
             'Content-Type': 'application/json',
               },
         
